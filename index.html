@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <title>Babble</title>
+        <script>
+            function validate()
+            {
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Babble - <a target = "_blank" href="http://babel.ifarchive.org/">Treaty of Babel</a></h1>
+        <h2>Bibliographic information for <i>interactive fiction</i></h2>
+        <div id="input">
+            <form id="ifbib" action="/proc" method="post" onSubmit="return validate()" >
+                <table border="0" width="100%">
+                <tr>
+                    <td style="color:white;background-color:green"><h3>Main</h3></td>
+                    <td style="color:white;background-color:green"></td>
+                </tr>
+                <tr>
+                <td>Title</td>
+                <td>
+                <input type="text" class="edtxt" size="40"
+                                maxLength="80" id="edTitle"
+                                placeholder="Title..."
+                                style="width:95%;color:black;background-color:lightgray">
+                </td>
+                </tr>
+                <tr>
+                <td>Subtitle</td>
+                <td>
+                <input type="text" class="edtxt" size="40"
+                                maxLength="80" id="edSubtitle"
+                                placeholder="Subtitle..."
+                                style="width:95%;color:black;background-color:lightgray">
+                </td>
+                </tr>
+                <tr>
+                <td>Author</td>
+                <td>
+                <input type="text" class="edtxt" size="40"
+                                maxLength="80" id="edAuthor"
+                                placeholder="Author..."
+                                style="width:95%;color:black;background-color:lightgray">
+                </td>
+                </tr>
+                <tr>
+                <td>E.mail</td>
+                <td>
+                <input type="email" class="edemail" size="40"
+                                maxLength="64" id="edEmail"
+                                placeholder="Email..."
+                                style="width:95%;color:black;background-color:lightgray">
+                </td>
+                </tr>
+                <tr>
+                <td>Web</td>
+                <td>
+                <input type="text" class="edtxt" size="40"
+                                maxLength="80" id="edWeb"
+                                placeholder="Web..."
+                                style="width:95%;color:black;background-color:lightgray">
+                </td>
+                </tr>
+                <tr>
+                <td style="color:white;background-color:green"><h3>Format</h3></td>
+                <td style="color:white;background-color:green"></td>
+                </tr>
+                <tr>
+                <td>Version</td>
+                <td>
+                <input type="number" class="ednum" size="40"
+                                align="right"
+                                min="1"
+                                value="1"
+                                maxLength="2" id="edVersion"
+                                placeholder="Version number..."
+                                style="width:95%;color:black;background-color:lightgray">
+                </td>
+                </tr>
+                <tr>
+                <td>Date</td>
+                <td>
+                <input type="date" class="eddate" size="40"
+                                maxLength="10" id="edDate"
+                                placeholder="Published on..."
+                                style="width:95%;color:black;background-color:lightgray">
+                </td>
+                </tr>
+                <tr>
+                    <td>Genre</td>
+                    <td>
+                        <SELECT id="edGenre" class="edlist">
+                        <OPTION selected value="0">Children's fiction</OPTION>
+                        <OPTION value="1">Collegiate fiction</OPTION>
+                        <OPTION value="2">Comedy</OPTION>
+                        <OPTION value="3">Erotica</OPTION>
+                        <OPTION value="3">Fairy tale</OPTION>
+                        <OPTION value="4">Fantasy</OPTION>
+                        <OPTION value="5">Fiction</OPTION>
+                        <OPTION value="6">Historical</OPTION>
+                        <OPTION value="7">Horror</OPTION>
+                        <OPTION value="8">Mistery</OPTION>
+                        </SELECT>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td>
+                        <SELECT id="edLanguage" class="edlist">
+                        <OPTION value="0">Spanish</OPTION>
+                        <OPTION selected value="1">English</OPTION>
+                        <OPTION value="2">Italian</OPTION>
+                        <OPTION value="3">German</OPTION>
+                        <OPTION value="3">French</OPTION>
+                        <OPTION value="4">Dutch</OPTION>
+                        <OPTION value="5">Slovenian</OPTION>
+                        </SELECT>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Forgiveness</td>
+                    <td>
+                        <SELECT id="edForgiveness" class="edlist">
+                        <OPTION selected value="0">Merciful</OPTION>
+                        <OPTION value="1">Polite</OPTION>
+                        <OPTION value="2">Tough</OPTION>
+                        <OPTION value="3">Nasty</OPTION>
+                        <OPTION value="3">Cruel</OPTION>
+                        </SELECT>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Format</td>
+                    <td>
+                        <SELECT id="edFormat" class="edlist">
+                        <OPTION selected value="0">Glulx</OPTION>
+                        <OPTION value="1">Z Code</OPTION>
+                        <OPTION value="2">Tads 2</OPTION>
+                        <OPTION value="3">Tads 3</OPTION>
+                        <OPTION value="3">Hugo</OPTION>
+                        <OPTION value="4">Alan</OPTION>
+                        <OPTION value="5">Adrift</OPTION>
+                        <OPTION value="6">Level 9</OPTION>
+                        <OPTION value="7">Agt</OPTION>
+                        <OPTION value="8">Magnetic Scrolls</OPTION>
+                        <OPTION value="9">AdvSys</OPTION>    
+                        <OPTION value="10">Executable</OPTION>
+                        <OPTION value="11">Html</OPTION>
+                        </SELECT>
+                    </td>
+                </tr>
+                <tr>
+                <td style="color:white;background-color:green"><h3>Description</h3></td>
+                <td style="color:white;background-color:green"></td>
+                </tr>
+                <tr><td></td><td>
+                    <textarea name="edDescription" cols="65" rows="10"></textarea>
+                </td></tr>
+                <tr><td></td><td>
+                    <input type="submit" value="Send" border="0" style="background-color:green;color:white;">
+                    <input type="reset" value="Reset" border="0" style="background-color:green;color:white;">
+                </td></tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

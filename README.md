@@ -1,0 +1,4 @@
+Bable
+=====
+
+Bibliographic information generator
